@@ -394,18 +394,26 @@ em {
 }
 
 .ticker-track {
-  display: inline-flex;
-  gap: 44px;
-  animation: ticker 34s linear infinite;
+  display: flex;
+  width: max-content;
+  animation: ticker 28s linear infinite;
+  will-change: transform;
 }
 
-.ticker-track span {
+.ticker-group {
+  display: flex;
+  flex-shrink: 0;
+  gap: 44px;
+  padding-right: 44px;
+}
+
+.ticker-group span {
   font-size: 11px;
   letter-spacing: .14em;
   text-transform: lowercase;
 }
 
-.ticker-track span::before {
+.ticker-group span::before {
   content: "";
   display: inline-block;
   width: 8px;
