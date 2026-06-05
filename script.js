@@ -2,6 +2,16 @@ const header = document.querySelector(".site-header");
 const menuButton = document.querySelector(".menu-button");
 const mobileMenu = document.querySelector(".mobile-menu");
 const revealItems = document.querySelectorAll(".reveal");
+const themeToggle = document.querySelector(".theme-toggle");
+
+const setTheme = (isDark) => {
+  document.body.classList.toggle("theme-dark", isDark);
+  if (!themeToggle) return;
+  themeToggle.setAttribute("aria-pressed", String(isDark));
+  themeToggle.setAttribute("aria-label", isDark ? "Ativar tema claro" : "Ativar tema escuro");
+};
+
+setTheme(localStorage.getItem("theme") === "dark");
 
 const revealObserver = new IntersectionObserver(
   (entries) => {
@@ -38,4 +48,10 @@ mobileMenu.querySelectorAll("a").forEach((link) => {
     menuButton.setAttribute("aria-expanded", "false");
     mobileMenu.classList.remove("open");
   });
+});
+
+themeToggle?.addEventListener("click", () => {
+  const isDark = !document.body.classList.contains("theme-dark");
+  setTheme(isDark);
+  localStorage.setItem("theme", isDark ? "dark" : "light");
 });

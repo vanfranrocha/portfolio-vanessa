@@ -30,7 +30,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="./styles.css" />
-  <script defer src="./script.js"></script>
+  <script defer src="./script.js?v=2"></script>
 </head>
 
 <body>
@@ -46,10 +46,15 @@
       <a href="#sobre">Sobre mim</a>
       <a href="#processo">Processo</a>
     </nav>
-    <a class="header-cta" href="#contato">Vamos conversar <span>↗</span></a>
-    <button class="menu-button" type="button" aria-label="Abrir menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
+    <div class="header-actions">
+      <a class="header-cta" href="#contato">Vamos conversar <span>↗</span></a>
+      <button class="theme-toggle" type="button" aria-label="Ativar tema escuro" aria-pressed="false">
+        <span></span>
+      </button>
+      <button class="menu-button" type="button" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </header>
 
   <div class="mobile-menu">
@@ -133,9 +138,27 @@
       </div>
     </section>
 
-    <div class="client-strip" aria-label="Empresas e marcas">
-      <span>‹ leilo</span><span>itaú</span><span>◉ bradesco</span><span>AUTO<strong>LM</strong></span><span>Diário da
-        Manhã</span><span>➤ JOTAJÁ</span>
+    <div class="client-strip" aria-label="Empresas e marcas atendidas">
+      <div class="client-track">
+        <div class="client-group">
+          <img src="./assets/clientes/leilo.png" alt="Leilo" />
+          <img src="./assets/clientes/itau.png" alt="Itaú" />
+          <img src="./assets/clientes/bradesco.png" alt="Bradesco" />
+          <img src="./assets/clientes/autolm.png" alt="AutoLM" />
+          <img src="./assets/clientes/dm.png" alt="Diário da Manhã" />
+          <img src="./assets/clientes/jotaja.png" alt="Jotajá" />
+          <img src="./assets/clientes/datapage.png" alt="datapage" />
+        </div>
+        <div class="client-group" aria-hidden="true">
+          <img src="./assets/clientes/leilo.png" alt="" />
+          <img src="./assets/clientes/itau.png" alt="" />
+          <img src="./assets/clientes/bradesco.png" alt="" />
+          <img src="./assets/clientes/autolm.png" alt="" />
+          <img src="./assets/clientes/dm.png" alt="" />
+          <img src="./assets/clientes/jotaja.png" alt="" />
+          <img src="./assets/clientes/datapage.png" alt="" />
+        </div>
+      </div>
     </div>
 
     <section class="projects section" id="projetos">
@@ -165,8 +188,8 @@
         <a class="project-card reveal" href="./case-autolm.html">
           <div class="project-meta"><span>Venda de veículos / 2025</span><i>↗</i></div>
           <h3>AutoLM</h3>
-          <p>Experiência digital para venda direta de veículos, unindo visual premium e jornada de compra.</p>
-          <div class="tags"><span>UI design</span><span>front-end</span></div>
+          <p>Home para venda direta de veículos com foco em garageiros, imagens com IA e UI responsiva.</p>
+          <div class="tags"><span>UI design</span><span>IA generativa</span><span>front-end</span></div>
           <img src="./assets/autolm.png" alt="Mockup do projeto AutoLM" loading="lazy" />
         </a>
         <a class="project-card reveal" href="./case-datapage.html">
@@ -177,10 +200,10 @@
           <img src="./assets/datapage.png" alt="Mockup do projeto datapage" loading="lazy" />
         </a>
         <a class="project-card reveal project-wide" href="./case-compare-compre.html">
-          <div class="project-meta"><span>Aplicativo food / 2021</span><i>↗</i></div>
+          <div class="project-meta"><span>Delivery / 2021</span><i>↗</i></div>
           <h3>Compare e Compre</h3>
-          <p>Processo de UI Design aplicado ao desenvolvimento de produto durante a pandemia.</p>
-          <div class="tags"><span>UI design</span><span>app</span><span>style guide</span></div>
+          <p>Aplicativo de delivery para comparar preços em tempo real e comprar com mais economia.</p>
+          <div class="tags"><span>UI design</span><span>delivery</span><span>protótipo</span></div>
           <img src="./assets/compare-compre.png" alt="Mockup do aplicativo Compare e Compre" loading="lazy" />
         </a>
       </div>
